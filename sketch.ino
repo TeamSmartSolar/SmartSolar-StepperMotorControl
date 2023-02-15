@@ -11,7 +11,7 @@
 
 // Define control variables.
 const int minSpeed = 0;
-const int maxSpeed = 160;
+const int maxSpeed = 240;
 int tiltSpeed;
 int rotateSpeed;
 
@@ -37,6 +37,7 @@ void loop() {
   if (digitalRead(ENABLE_PIN) == HIGH) {
     // Read the tilt speed potentiometer.
     tiltSpeed = map(analogRead(TILT_SPEED_PIN), 0, 1023, minSpeed, maxSpeed);
+    
     if (digitalRead(TILT_FRWD_CMD_PIN) == HIGH) {
       // If the forwards command signal is high, move forwards.
       tiltStepper.setSpeed(tiltSpeed);
