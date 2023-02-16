@@ -1,7 +1,7 @@
 # SmartSolar-StepperMotorControl
 Stepper Motor Control for ECE Senior Design 
 
-Built for Arduino Uno with two Stepper Motors as output.
+Built for Arduino Uno with two Stepper Motors as output. An enable signal is sent from the master microcontroller. Potentiometers control speed (RPM) of motors. Coded logic determines which directions they should turn. 
 
 [Simulation on Wokwi](https://wokwi.com/projects/356667885699627009)
 
@@ -29,5 +29,15 @@ Built for Arduino Uno with two Stepper Motors as output.
           Pin 10 is Stepper Motor's A- input
           Pin 11 is Stepper Motor's A+ input
     
+# Basic logic: 
+      The minimum speed is 0, while the maximum speed is 230 RPM (determined by motor spec). 
+      
+      The potentiometer values are scaled in the digital logic to allow the speed to be controlled by the arduino.
+      
+      The input logic ranges from -5V 0V and 5V, and each of those values determine whether the motor 
+      should turn backwards or forwards or not at all. 
+      
+# Software Activity Diagram
+![image](https://user-images.githubusercontent.com/125402985/219469035-9ea51fa5-d149-4272-99ea-b112979ef72c.png)
 
 
