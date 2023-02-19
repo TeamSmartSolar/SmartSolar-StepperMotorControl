@@ -2,22 +2,22 @@
 
 // Define pinouts.
 #define ENABLE_PIN 1
-#define ROTATE_BKWD_CMD_PIN 2
-#define ROTATE_FRWD_CMD_PIN 3
-#define TILT_BKWD_CMD_PIN 12
-#define TILT_FRWD_CMD_PIN 13
+#define ROTATE_BKWD_CMD_PIN 9
+#define ROTATE_FRWD_CMD_PIN 8
+#define TILT_BKWD_CMD_PIN 7
+#define TILT_FRWD_CMD_PIN 6
 #define TILT_SPEED_PIN A1
 #define ROTATE_SPEED_PIN A2
 
 // Define control variables.
 const int minSpeed = 0;
-const int maxSpeed = 240;
+const int maxSpeed = 230;
 int tiltSpeed;
 int rotateSpeed;
 
 // Instantiate stepper motor objects. Using 4 wire direct control.
-AccelStepper tiltStepper(AccelStepper::FULL4WIRE, 8, 9, 10, 11);
-AccelStepper rotateStepper(AccelStepper::FULL4WIRE, 4, 5, 6, 7);
+AccelStepper tiltStepper(AccelStepper::FULL4WIRE, 2, 3, 4, 5);
+AccelStepper rotateStepper(AccelStepper::FULL4WIRE, 10, 11, 12, 13);
 
 void setup() {
   // Configure the input pins to use the Arduino's internal pullup resistors.
