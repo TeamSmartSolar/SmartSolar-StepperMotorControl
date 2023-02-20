@@ -6,6 +6,7 @@ Built for Arduino Uno with two Stepper Motors as output. An enable signal is sen
 [Simulation on Wokwi](https://wokwi.com/projects/356667885699627009)
 
 # Inputs to Arduino: 
+      Homing Signal: Pin 0 - Digital pulse sent from Master Microcontroller
       Enable Signal: Pin 1 - Digital signal 0V or 5V from Master Microcontroller 
 
       Rotate Backward Command: Pin 9 - Digital signal either 0V or 5V from Window Detector 1
