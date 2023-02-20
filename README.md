@@ -18,17 +18,17 @@ Built for Arduino Uno with two Stepper Motors as output. An enable signal is sen
       Tilt Speed Pin: A1 - Analog 0V to 5V controlled by Potentiometer 2
 
 # Outputs from Arduino:
-      Rotate Output Command: Pin 4, 5, 6, 7
+      Rotate Output Command: Pin 2, 3, 4, 5
           Pin 2 is Stepper Motor's B- input
           Pin 3 is Stepper Motor's B+ input
-          Pin 4 is Stepper Motor's A- input
-          Pin 5 is Stepper Motor's A+ input
+          Pin 4 is Stepper Motor's A+ input
+          Pin 5 is Stepper Motor's A- input
 
-      Tilt Output Command: Pin 8, 9, 10, 11
+      Tilt Output Command: Pin 10, 11, 12, 13
           Pin 10 is Stepper Motor's B- input
           Pin 11 is Stepper Motor's B+ input
-          Pin 12 is Stepper Motor's A- input
-          Pin 13 is Stepper Motor's A+ input
+          Pin 12 is Stepper Motor's A+ input
+          Pin 13 is Stepper Motor's A- input
     
 # Basic logic: 
       The minimum speed is 0, while the maximum speed is 230 RPM (determined by motor spec). 
