@@ -25,12 +25,12 @@ AccelStepper rotateStepper(AccelStepper::FULL4WIRE, 10, 11, 12, 13);
 
 void setup() {
   // Configure the input pins to use the Arduino's internal pullup resistors.
-  pinMode(HOME_CMD_PIN, INPUT_PULLUP);
-  pinMode(ENABLE_PIN, INPUT_PULLUP);
-  pinMode(ROTATE_BKWD_CMD_PIN, INPUT_PULLUP);
-  pinMode(ROTATE_FRWD_CMD_PIN, INPUT_PULLUP);
-  pinMode(TILT_BKWD_CMD_PIN, INPUT_PULLUP);
-  pinMode(TILT_FRWD_CMD_PIN, INPUT_PULLUP);
+  pinMode(HOME_CMD_PIN, INPUT);
+  pinMode(ENABLE_PIN, INPUT);
+  pinMode(ROTATE_BKWD_CMD_PIN, INPUT);
+  pinMode(ROTATE_FRWD_CMD_PIN, INPUT);
+  pinMode(TILT_BKWD_CMD_PIN, INPUT);
+  pinMode(TILT_FRWD_CMD_PIN, INPUT);
 
   // Set the max speed of each stepper to prevent overshoot.
   tiltStepper.setMaxSpeed(maxSpeed);
